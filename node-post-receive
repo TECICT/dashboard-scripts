@@ -1,0 +1,14 @@
+#!/bin/sh
+
+DEPLOYDIR=~/apps/dashboard-node
+GIT_WORK_TREE="$DEPLOYDIR" git checkout -f
+cd "$DEPLOYDIR"
+killall chromium-browser
+sudo forever stop server.js
+sudo forever stop ../dashboard-angular/server.js
+npm install
+sudo forever start server.js
+sudo forever start ../dashboard-angular/server.js
+DISPLAY=:0 chromium-browser --start-fullscreen --disable-infobars --disable-session-crashed-bubble --noerrdialogs http://localhost:80 &
+echo "All done :)"
+
