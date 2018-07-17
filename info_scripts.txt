@@ -1,4 +1,6 @@
-autostart -> .config/lxsession/LXDE-pi/
+autostart -> ~/.config/lxsession/LXDE-pi/
 	is run when the pi boots up
 cronJob -> /etc/cron.d/
 	is used to schedule tasks
+angular-post-receive -> ~/dashboard-angular.git/hooks/post-receive
+node-post-receive -> ~/dashboard-node.git/hooks/post-receive
