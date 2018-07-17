@@ -1,0 +1,9 @@
+@lxpanel --profile LXDE-pi
+@pcmanfm --desktop --profile LXDE-pi
+@point-rpi
+@xset s noblank
+@xset s off
+@xset -dpms
+@/home/pi/bin/startup.sh
+@unclutter -idle 0
+

@@ -1,0 +1,3 @@
+30 17 * * * sudo /home/pi/bin/raspi-monitor off >> /home/pi/logs/crontab.txt 2>&1
+30 07 * * * sudo /home/pi/bin/raspi-monitor on >> /home/pi/logs/crontab.txt 2>&1
+0 0 * * * sudo reboot
