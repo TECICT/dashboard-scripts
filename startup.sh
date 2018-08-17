@@ -1,8 +1,8 @@
 #!/bin/bash
+DISPLAY=:0;xdotool mousemove 0 300
 sudo forever stop /home/pi/apps/dashboard-node/server.js
 sudo forever stop /home/pi/apps/dashboard-angular/server.js
 sudo killall node
-DISPLAY=:0;xdotool mousemove 0 300
 cd /home/pi/apps/dashboard-node/
 sudo forever server.js &> /home/pi/logs/node_log.txt &
 echo "node server started"
